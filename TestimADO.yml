@@ -11,7 +11,6 @@ steps:
     --token "1UirXpOB5K37HMxV3yK1f9iu0a5x26C2HA5E5jWNMJObLS6sE3" \
     --project "9sSkgSujJmdD3xYQFFLl" \
     --grid "testim-ha-grid" \
-    --mode "selenium" \
     --branch "India PS" \
     --label "tabs" \
     --test-config "cross browser chrome" \
