@@ -13,7 +13,7 @@ steps:
     --grid "testim-ha-grid" \
     --mode "selenium" \
     --branch "India PS" \
-    --label "login" \
+    --label "tabs" \
     --report-file testim-tests-report.xml
   displayName: 'npm install testim-cli and run tests'
 
