@@ -1,0 +1,23 @@
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '22.14.0'  # Replace 'lts' with your specific version '22.14.0'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install -g @testim/testim-cli
+    testim \
+    --token "1UirXpOB5K37HMxV3yK1f9iu0a5x26C2HA5E5jWNMJObLS6sE3" \
+    --project "9sSkgSujJmdD3xYQFFLl" \
+    --grid "testim-ha-grid" \
+    --mode "selenium" \
+    --branch "India PS" \
+    --label "tabs" \
+    --report-file testim-tests-report.xml
+  displayName: 'npm install testim-cli and run tests'
+
+- task: PublishTestResults@2
+  displayName: 'Publish Testim Test Results'
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/testim-tests-report.xml'
