@@ -14,6 +14,7 @@ steps:
     --mode "selenium" \
     --branch "India PS" \
     --label "tabs" \
+    --test-config "cross browser chrome" \
     --report-file testim-tests-report.xml
   displayName: 'npm install testim-cli and run tests'
 
