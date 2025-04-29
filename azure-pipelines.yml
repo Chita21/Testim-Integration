@@ -1,7 +1,7 @@
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: 'lts'
+    versionSpec: '22.14.0.'
     # You can also change 'lts' to any supported LTS Node.js version.
   displayName: 'Install Node.js'
 
@@ -13,8 +13,7 @@ steps:
     --grid "testim-ha-grid" \
     --mode "selenium" \
     --branch "India PS" \
-    --label "tabs" \
-    --test-config "cross browser chrome" \
+    --label "codeyqa" \
     --report-file testim-tests-report.xml
   displayName: 'npm install testim-cli and run tests'
 
